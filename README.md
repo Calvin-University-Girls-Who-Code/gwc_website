@@ -4,4 +4,4 @@ This repository hosts a website for Calvin University's Girls Who Code College L
 
 Affiliated Links:
 
-(Calvin University)[https://calvin.edu/academics/school-stem/computer-science]
+[Calvin University](https://calvin.edu/academics/school-stem/computer-science)
