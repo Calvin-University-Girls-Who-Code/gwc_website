@@ -1,0 +1,209 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: auto;
+}
+
+.centered-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered-box-landing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display:block;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+.centered-box-leadership {
+  width: 60%; /* Adjust as needed */
+  margin-top: 90px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center; /* Centers the text inside */
+}
+
+.center-container{
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+/*Front Button*/
+.front-button {
+  font-size: 50px;
+  color: #222;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 500ms;
+  transition-property: color;
+  text-align:center;
+  align-items:center;
+}
+
+.front-button:focus,
+.front-button:hover {
+  transition-duration: 500ms;
+  color: #222222aa;
+  background: linear-gradient(0, #FD65AC, #000 70%, #000 99%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.front-button:focus:after,
+.front-button:hover:after {
+  width: 100%;
+  left: 0px;
+}
+
+.front-button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 0px;
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  background-color: #dfffdf;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 500ms;
+  transition-property: width, left;
+}
+
+.front-button:focus:before,
+.front-button:hover:before {
+  width: 100%;
+  left: 0px;
+}
+
+.front-button:before {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 0px;
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  background-color: #FD65AC;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 500ms;
+  transition-property: width, left;
+  filter: blur(5px);
+}
+
+/* Home title*/
+.homeTitle {
+  margin: 20;
+  align-items: center;
+  text-align: center;
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: white;
+  font-size: 60px;
+}
+
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #FD65AC;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+.introduction {
+  margin: 20;
+  align-items: center;
+  text-align: center;
+  font-family: "Arial";
+  position: relative;
+  color: white;
+  font-size: 55px;
+  display: block;
+}
+
+/*Leadership Card*/
+
+.leadership-card {
+  display:inline-block;
+  width: 300px;
+  height: 450px;
+  margin: 20px;
+  border-radius: 30px;
+  background: #313132;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+              -15px -15px 30px rgb(60, 60, 60);
+ }
+ 
+ .card-grid {
+  grid-template-columns: repeat(2,1fr);
+  flex-wrap: wrap; /* Allows wrapping */
+  flex-direction: column; /* Ensures stacking */
+  align-items: center; /* Centers buttons horizontally */
+  gap: 10px; /* Adds space between buttons */
+}
+
+.leadership-text{
+  margin-top: 10px;
+  align-items: center;
+  text-align: center;
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: white;
+  font-size: 12;
+}
